@@ -3,16 +3,15 @@ package br.com.aplicacaoDeCompras.gestaoDeCompras;
 import java.util.ArrayList;
 import java.util.List;
 
-public class cartaoDeCredito {
+public class CartaoDeCredito {
     private double limiteTotal;
     private double limiteDisponivel;
-    private List<Compra> compras;
+    private List<Compra> compras = new ArrayList<>();;
 
     // Construtor
-    public cartaoDeCredito(double limiteTotal) {
+    public CartaoDeCredito(double limiteTotal) {
         this.limiteTotal = limiteTotal;
         this.limiteDisponivel = limiteTotal;
-        this.compras = new ArrayList<>();
     }
 
     // Compra Aprovada
@@ -23,6 +22,10 @@ public class cartaoDeCredito {
         } else {
             return false;
         }
+    }
+
+    public void addCompras(Compra compras) {
+        this.compras.add(compras);
     }
 
 
