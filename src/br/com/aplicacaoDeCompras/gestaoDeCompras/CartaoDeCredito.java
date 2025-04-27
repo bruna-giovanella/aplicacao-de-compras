@@ -18,15 +18,14 @@ public class CartaoDeCredito {
     public boolean aprovacaoDeCompra(Compra compra) {
         if (this.limiteDisponivel >= compra.getValor()) {
             this.limiteDisponivel -= compra.getValor();
+            this.compras.add(compra);
             return true;
         } else {
             return false;
         }
     }
 
-    public void addCompras(Compra compras) {
-        this.compras.add(compras);
-    }
+
 
 
     // Getters

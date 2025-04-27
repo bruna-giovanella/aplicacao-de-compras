@@ -23,7 +23,6 @@ public class Main {
             double valor = sc.nextDouble();
 
             Compra compra = new Compra(item, valor);
-            cartaoDeCredito.addCompras(compra);
             boolean compraRealizada = cartaoDeCredito.aprovacaoDeCompra(compra);
 
             if (compraRealizada) {
